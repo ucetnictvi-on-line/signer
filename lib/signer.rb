@@ -83,6 +83,7 @@ class Signer
       @signature_node = security_node.at_xpath('ds:Signature', ds: DS_NAMESPACE)
       unless @signature_node
         @signature_node = Nokogiri::XML::Node.new('Signature', document)
+        @signature_node['Id'] = "SIG-#{security_token_id.split('-').last}"
         set_namespace_for_node(@signature_node, DS_NAMESPACE, ds_namespace_prefix)
         security_node.add_child(@signature_node)
       end
@@ -301,8 +302,8 @@ class Signer
 
   # Reset digest algorithm for signature creation and signature algorithm identifier
   def set_default_signature_method!
-    self.signature_digest_algorithm = :sha1
-    self.signature_algorithm_id = 'http://www.w3.org/2000/09/xmldsig#rsa-sha1'
+    self.signature_digest_algorithm = :sha256
+    self.signature_algorithm_id = 'http://www.w3.org/2001/04/xmldsig-more#rsa-sha256'
   end
 
   ##
