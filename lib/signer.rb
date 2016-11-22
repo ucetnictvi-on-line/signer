@@ -250,7 +250,7 @@ class Signer
     transforms_node.add_child(transform_node)
 
     digest_method_node = Nokogiri::XML::Node.new('DigestMethod', document)
-    digest_method_node['Algorithm'] = @digester.digest_id
+    digest_method_node['Algorithm'] = 'http://www.w3.org/2001/04/xmlenc#sha256'
     reference_node.add_child(digest_method_node)
     set_namespace_for_node(digest_method_node, DS_NAMESPACE, ds_namespace_prefix)
 
