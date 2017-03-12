@@ -1,6 +1,6 @@
 # Signer
 
-This is a fork of original [Signer](https://badge.fury.io/rb/signer.svg) gem with applied patch for explicit signature namespaces.
+This is a fork of original [Signer](https://badge.fury.io/rb/signer.svg) gem with applied patch for explicit signature namespaces and some defaults changes.
 
 ## Why?
 
