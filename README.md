@@ -14,7 +14,7 @@ gem install eet_signer
 
 ## Usage
 
-For usage please see original gem's documentation. This gem should be rebased with the original gem at regularly.
+For usage please see original gem's documentation. This gem should be rebased with the original gem regularly.
 
 ### Explicit signature namespaces
 
